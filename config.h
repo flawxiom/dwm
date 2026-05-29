@@ -70,9 +70,16 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *rofi[] = {"rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", NULL }; 
 static const char *volumeUp[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
 static const char *volumeDown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
+static const char *brightness_up[] = {"xbacklight", "-inc", "5", NULL };
+static const char *brightness_down[] = { "xbacklight", "-dec", "5", NULL };
+
+
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+
+        { 0,                            XF86XK_MonBrightnessUp,    spawn, {.v = brightness_up } },
+	{ 0,                            XF86XK_MonBrightnessDown,  spawn, {.v = brightness_down } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volumeUp } },
         { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = volumeDown } },
         { MODKEY,                       XK_p,      spawn,          {.v = rofi } },
