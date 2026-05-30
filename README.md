@@ -8,8 +8,11 @@ this build is intended for personal use
 - [hidevacanttags](<https://dwm.suckless.org/patches/hide_vacant_tags/>)
 - [notitle](<https://dwm.suckless.org/patches/notitle/>)
 
-# other
+# dependencies / other stuff
+- font: JetBrainsMono Nerd Font
 - statusbar: slstatus
 - terminal: alacritty
 - application launcher: rofi
-- [wallpaper](<https://wallhaven.cc/w/96w8e8>)
+- volume keys: wpctl (pipewire)
+- brightness keys: xbacklight
+- [my current wallpaper](<https://wallhaven.cc/w/96w8e8>)
