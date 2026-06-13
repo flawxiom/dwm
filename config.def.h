@@ -72,12 +72,17 @@ static const char *volumeUp[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@",
 static const char *volumeDown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
 static const char *brightness_up[] = {"xbacklight", "-inc", "5", NULL };
 static const char *brightness_down[] = { "xbacklight", "-dec", "5", NULL };
+static const char *playpause[] = { "playerctl", "play-pause", NULL };	
+static const char *next[] = { "playerctl", "next", NULL };
+static const char *prev[] = { "playerctl", "previous", NULL };  
 
 
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-
+        { 0,                            XF86XK_AudioPlay,          spawn, {.v = playpause } }, 
+	{ 0,                            XF86XK_AudioNext,          spawn, {.v = next } },
+	{ 0,                            XF86XK_AudioPrev,          spawn, {.v = prev } },
         { 0,                            XF86XK_MonBrightnessUp,    spawn, {.v = brightness_up } },
 	{ 0,                            XF86XK_MonBrightnessDown,  spawn, {.v = brightness_down } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volumeUp } },
