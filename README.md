@@ -14,5 +14,6 @@ this build is intended for personal use
 - terminal: alacritty
 - application launcher: rofi
 - volume keys: wpctl (pipewire)
+- playback keys: playerctl
 - brightness keys: xbacklight
 - [my current wallpaper](<https://wallhaven.cc/w/96w8e8>)
