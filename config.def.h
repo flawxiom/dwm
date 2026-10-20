@@ -23,7 +23,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "󰈹", "󰘸", "", "", "6", "7" };
+static const char *tags[] = { "", "", "󰈹", "", "", "6", "7" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -31,11 +31,11 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
-        { "Anki",     NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "discord",  NULL,       NULL,       1 << 3,       0,           -1 },
-	{ "Spotify",  NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "Gimp",       NULL,       NULL,       0,            1,           -1 },
+	{ "Thunar",     NULL,       NULL,       1 << 1,       0,           -1 },
+        { "librewolf",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "discord",    NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "Spotify",    NULL,       NULL,       1 << 4,       0,           -1 },
 };
 
 /* layout(s) */
@@ -70,8 +70,8 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *rofi[] = {"rofi", "-show", "drun", "-theme", "~/.config/rofi/config.rasi", NULL }; 
 static const char *volumeUp[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%+", NULL };
 static const char *volumeDown[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "5%-", NULL };
-static const char *brightness_up[] = {"xbacklight", "-inc", "5", NULL };
-static const char *brightness_down[] = { "xbacklight", "-dec", "5", NULL };
+static const char *brightness_up[] = {"brightnessctl", "set", "5%+", NULL };
+static const char *brightness_down[] = { "brightnessctl", "set", "5%-", NULL };
 static const char *playpause[] = { "playerctl", "play-pause", NULL };	
 static const char *next[] = { "playerctl", "next", NULL };
 static const char *prev[] = { "playerctl", "previous", NULL };  
