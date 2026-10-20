@@ -13,7 +13,7 @@ this build is intended for personal use
 - statusbar: slstatus
 - terminal: alacritty
 - application launcher: rofi
-- volume keys: wpctl (pipewire)
-- playback keys: playerctl
-- brightness keys: xbacklight
-- [my current wallpaper](<https://wallhaven.cc/w/96w8e8>)
+- volume: wireplumber (pipewire)
+- playback: playerctl
+- brightness: brightnessctl
+- [my current wallpaper](<https://whvn.cc/w5x99p>)
