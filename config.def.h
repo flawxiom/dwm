@@ -75,18 +75,23 @@ static const char *brightness_down[] = { "brightnessctl", "set", "5%-", NULL };
 static const char *playpause[] = { "playerctl", "play-pause", NULL };	
 static const char *next[] = { "playerctl", "next", NULL };
 static const char *prev[] = { "playerctl", "previous", NULL };  
-
+static const char *shotfull[] = { "shot", "full", NULL };
+static const char *shotarea[] = { "shot", "area", NULL };
+static const char *shotwin[] = { "shot", "window", NULL };
 
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,                            XK_Print,                  spawn, {.v = shotarea } },	
+        { ShiftMask,                    XK_Print,                  spawn, {.v = shotfull } },
+	{ MODKEY,                       XK_Print,                  spawn, {.v = shotwin } },
         { 0,                            XF86XK_AudioPlay,          spawn, {.v = playpause } }, 
 	{ 0,                            XF86XK_AudioNext,          spawn, {.v = next } },
 	{ 0,                            XF86XK_AudioPrev,          spawn, {.v = prev } },
         { 0,                            XF86XK_MonBrightnessUp,    spawn, {.v = brightness_up } },
 	{ 0,                            XF86XK_MonBrightnessDown,  spawn, {.v = brightness_down } },
-	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volumeUp } },
-        { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = volumeDown } },
+	{ 0,                            XF86XK_AudioRaiseVolume,   spawn, {.v = volumeUp } },
+        { 0,                            XF86XK_AudioLowerVolume,   spawn, {.v = volumeDown } },
         { MODKEY,                       XK_p,      spawn,          {.v = rofi } },
  	{ MODKEY,                       XK_v,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
