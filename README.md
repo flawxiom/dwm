@@ -16,4 +16,4 @@ this build is intended for personal use
 - volume: wireplumber (pipewire)
 - playback: playerctl
 - brightness: brightnessctl
-- [my current wallpaper](<https://whvn.cc/w5x99p>)
+- [my current wallpaper](<https://whvn.cc/zp8o3j>)
